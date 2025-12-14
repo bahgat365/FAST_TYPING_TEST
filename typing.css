@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "cairo",sans-serif;
+}
+:root{
+    --mainColor:rgb(37, 186, 216);
+    --Green: rgb(3, 213, 111);
+}
+.page{
+    background-color: #eee;
+    height: 100vh;
+}
+.page .title{
+    background-color: var(--mainColor);
+    text-align: center;
+    padding: 20px;
+    color:white
+    
+}
+.contaner{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+/* explain */
+.contaner .explain{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;  
+}
+/* Game Style Selector Box */
+.contaner select.YourLevel {
+   
+    padding: 0 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 2px solid var(--mainColor);
+    background-color: #fff;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--mainColor);
+    outline: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%2337BAD8' height='22' viewBox='0 0 20 20' width='22' xmlns='http://www.w3.org/2000/svg'><polygon points='0,0 20,0 10,12'/></svg>");
+
+    background-repeat: no-repeat;
+    background-position: right 2px top 6px  ;
+    background-size: 6px;
+    transition: 0.3s;
+}
+
+.contaner select.YourLevel:hover {
+    border-color: var(--Green);
+}
+
+.contaner select.YourLevel:focus {
+    box-shadow: 0 0 8px rgba(37,186,216,0.6);
+    border-color: var(--Green);
+    color: var(--Green);
+}
+
+/* 0000000 */
+.contaner .explain div>span.time{
+    color: var(--Green);
+    font-weight: 600; 
+         &::after{
+content: " ]";
+}
+&::before{
+content: "[ ";
+}
+}
+/* start button */
+.contaner button.start{
+    margin: 15px auto;
+    background-color:var(--Green) ;
+    border: none;
+    display: block;
+    padding:20px ;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+.contaner button.start:hover{
+    background-color: rgb(66, 189, 113);
+}
+
+.contaner h3.word{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--mainColor); 
+    user-select: none;
+}
+input#Your_word{
+border: none;
+width: 100%;
+padding: 15px;
+outline: none;
+caret-color: var(--mainColor);
+text-align: center;
+font-size: 30px;
+font-weight: 600;
+color: rgb(0, 0, 0);
+margin-bottom: 15px;
+}
+input#Your_word::placeholder{
+color: rgb(176, 175, 175);
+font-size: 25px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+transition: .3s;
+
+}
+input#Your_word:focus::placeholder{
+    opacity: 0;
+}
+.contaner .all_Words{
+width: 100%;
+background-color: rgb(255, 255, 255);
+display: flex;
+flex-wrap: wrap;
+padding: 15px;
+border-radius: 5px;
+margin-bottom: 15px;
+}
+.contaner .all_Words .program_word{
+    background-color: var(--mainColor);
+    padding: 10px;
+    margin:10px 5px ;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+.contaner footer{
+width: 100%;
+background:white;
+display: flex;
+justify-content: space-between;
+padding: 15px;
+.time_left{
+    color: var(--Green);
+}
+.Your_score{
+color: var(--Green);
+}
+}
+.contaner .result.fail{
+    margin-top: 15px;
+    color:red;
+    font-weight: 800;
+    font-size: 40px;
+}
+.contaner .result.win{
+    margin-top: 15px;
+    color:var(--Green);
+    font-weight: 800;
+    font-size: 40px;
+}

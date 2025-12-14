@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Typing Test</title>
+    <link rel="stylesheet" href="typing.css">
+       <!-- font awsom library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!--  Normalize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+   <!-- google fonts to use font like cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+   <!-- favicons -->
+    <link rel="icon" href="./imges/favicons.png">
+    <!-- castom alert  -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+ <div class="page">
+    <!-- title -->
+    <div class="title"><h2>Typing Speed Test Game</h2></div>
+    <!-- level and time -->
+     <div class="contaner">
+    <div class="explain">
+        <div>You are playing on  
+            <label for="my_selector">Level:</label>
+            <select class="YourLevel"name="my_selector" id="my_selector">
+                <option value="">Select</option>
+                <option value="normal">Normal</option>
+                <option value="easy">Easy</option>
+                <option value="hard">Hard</option>
+            </select>
+             level & You Have <span class="time"></span> Seconds To Type The Word </div>
+    </div>
+    <!-- start button -->
+     <button class="start">start</button>
+    <!-- the word -->
+     <h3 class="word"></h3>
+     <!-- input field -->
+    <input type="text" name="TestWord" id="Your_word" placeholder="Type here">
+    <!-- All words -->
+     <div class="all_Words"> 
+     <div class="program_word">word1</div></div>
+     <footer>
+        <div class="time">Time Left: <span class="time_left">  </span> second</div>
+        <div class="score">Score: <span class="Your_score">  </span> from <span class="gen_score"></span></div>
+     </footer>
+     <div class="result fail"></div>
+        <div class="result win"></div>
+     </div>
+ </div> 
+<script src="./typing.js"></script>
+</body>
+</html>
